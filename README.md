@@ -1,10 +1,10 @@
-My solutions to Introduction to Algorithm book by CLRS.
+## My solutions to Introduction to Algorithm book by CLRS.
 
 
 
 
 
-
+<br><br><br><br><br><br><br>
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/farhah/Introduction-to-Algorithm-by-CLRS/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
