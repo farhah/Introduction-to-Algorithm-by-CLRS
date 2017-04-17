@@ -2,9 +2,9 @@
 layout:     post
 title:      Chapter 2 solutions
 date:       2017-04-16GMT+8 12:16:21
-summary:    Introduction to Algorithm by CLRS.
+summary:    Introduction to Algorithms by CLRS.
 categories: [algorithms]
-tags: [Introduction to Algorithm by CLRS, QA]
+tags: [Introduction to Algorithms by CLRS, QA]
 ---
 ### Insertion sort from pseudo code to python
 {% highlight python linenos=table lineanchors %}
