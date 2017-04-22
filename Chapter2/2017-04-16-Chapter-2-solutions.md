@@ -7,7 +7,7 @@ categories: [algorithms]
 tags: [Introduction to Algorithms by CLRS, QA]
 ---
 ### Insertion sort from pseudo code to python
-{% highlight python linenos=table lineanchors %}
+```python
 def insertion_sort(A):
     for i in range(1, len(A)):
         key = A[i]
@@ -19,8 +19,7 @@ def insertion_sort(A):
 
 
 print(insertion_sort([5, 2, 3, 4]))
-{% endhighlight %}
-
+```
 ---
 
 ### 2.1-1
@@ -31,7 +30,7 @@ print(insertion_sort([5, 2, 3, 4]))
 ### 2.1-2
 >Rewrite the INSERTION-SORT procedure to sort into nonincreasing instead of non- decreasing order.
 
-{% highlight python linenos=table lineanchors %}
+```python
 def insertion_sort_nonincresing(A):
     for i in range(1, len(A)):
         key = A[i]
@@ -42,7 +41,7 @@ def insertion_sort_nonincresing(A):
     return A
 
 print(insertion_sort_nonincresing([5, 2, 3, 4]))
-{% endhighlight %}
+```
 
 ---
 
@@ -52,7 +51,7 @@ Input: A sequence of n numbers $$ A = (a_{1}, a_{2}, a_{3}, .., a_{n}) $$ and a 
 Output: An index $$ i $$ such that $$ v =  A[i] $$ or the special value NIL if $$ v $$ does not apper in $$ A$$<br><br><br>
 Write pseudocode for linear search, which scans through the sequence, looking for $$ v $$ . Using a loop invariant, prove that your algorithm is correct. Make sure that your loop invariant fulfills the three necessary properties.
 
-{% highlight python linenos=table lineanchors %}
+```python
 def linear_search(A, val):
     for i in range(len(A)):
         if A[i] == val:
@@ -61,7 +60,7 @@ def linear_search(A, val):
     return None
 
 print(linear_search([5, 2, 3, 4], 4))
-{% endhighlight %}
+```
 
 ---
 
@@ -69,7 +68,7 @@ print(linear_search([5, 2, 3, 4], 4))
 >Consider the problem of adding two $$ n $$-bit binary integers, stored in two $$ n $$-element arrays $$ A $$ and $$ B $$. The sum of the two integers should be stored in binary form in an $$ (n+1) $$element array C. State the problem formally and write pseudocode for adding the two integers.
 
 
-{% highlight python linenos=table lineanchors %}
+```python
 def add_2bin(A, B):
     # both A and B has the same length n
     C = []
@@ -86,7 +85,7 @@ def add_2bin(A, B):
     return C
 
 print(add_2bin([1, 0], [1, 0]))
-{% endhighlight %}
+```
 
 ---
 
@@ -100,7 +99,7 @@ $$ n^3 = \Theta n $$
 ### 2.2-2
 >Consider sorting n numbers stored in array $$ A $$ by first finding the smallest element of $$ A $$  and exchanging it with the element in $$ A[1] $$. Then find the second smallest element of $$ A$$ and exchange it with $$ A[2] $$. Continue in this manner for the first $$ n - 1 $$ elements of $$ A$$. Write pseudocode for this algorithm, which is known for selection sort. What loop invariant does this algorithm maintain? Why does it need to run for only the first $$ n - 1 $$ elements, rather than for all $$ n $$ elements? Give the best case and worst case running times of selection sort in $$\Theta$$-notation.
 
-{% highlight python linenos=table lineanchors %}
+```python
 def selection_sort(A):
     for i in range(len(A) - 1):
         smallest = A[i]
@@ -113,7 +112,7 @@ def selection_sort(A):
     return A
 
 print(selection_sort([5, 4, 3, 2, 8, 0, 8, 11, 1]))
-{% endhighlight %}
+```
 
 ---
 
@@ -136,7 +135,7 @@ when the elements are pre-sorted we can have a good base-case running time.
 
 ### Merge sort from pseudo code to python
 
-{% highlight python linenos=table lineanchors %}
+```python
 def merge(left, right):
     result = []
     i, j = 0, 0
@@ -160,10 +159,10 @@ def merge_sort(A):
     return merge(merge_sort(L), merge_sort(R))
 
 print(merge_sort([5, 4, 8, 7, 1]))
-{% endhighlight %}
+```
 
 ### Merge sort from pseudo code in the book
-{% highlight python linenos=table lineanchors %}
+```python
 def merge2(A, p, q, r):
     n1 = q - p + 1
     n2 = r - q
@@ -199,7 +198,7 @@ def merge_sort2(A, p, r):
 A = [5, 4, 8, 7, 1]
 merge_sort2(A, 0, len(A) - 1)
 print(A)
-{% endhighlight %}
+```
 
 ---
 
@@ -265,7 +264,7 @@ $$
 # 2.3-5
 >Referring back to the searching problem (see Exercise 2.1-3), observe that if the sequence $$A$$ is sorted, we can check the midpoint of the sequence against $$v$$ and eliminate half of the sequence from further consideration. The binary __search__ algorithm repeats this procedure, halving the size of the remaining portion of the sequence each time. Write pseudocode, either iterative or recursive, for binary search. Argue that the worst-case running time of binary search is $$\Theta(lg n)$$
 
-{% highlight python linenos=table lineanchors %}
+```python
 def binary_search(A, val):
     mid = (len(A) // 2) - 1
     if mid < 0:
@@ -279,7 +278,7 @@ def binary_search(A, val):
         binary_search(A[:mid], val)
 
 print(binary_search([1, 4, 5, 7, 8, 9, 10], 5))
-{% endhighlight %}
+```
 
 Binary search array must be pre-sorted.
 
@@ -314,7 +313,7 @@ If perform binary search on $$A[0..j-1]$$, where $$j$$ is the current element, a
 # 2.3-7 $$\star$$
 >Describe a $$\Theta(n log n)$$-time algorithm that, given a set $$S$$ of $$n$$ integers and another integer $$x$$, determines whether or not there exist two elements in $$S$$ whose sum is exactly $$x$$.
 
-{% highlight python linenos=table lineanchors %}
+```python
 def sum_x(A, x):
     # need to sort the array. Merge sort is nlogn
 
@@ -355,7 +354,7 @@ def sum_x(A, x):
 
 
 print(sum_x([5, 4, 8, 3, 2], 12))
-{% endhighlight %}
+```
 
 $$T(n) = nlogn + n \\ \therefore \Theta(nlogn)$$
 
@@ -433,11 +432,11 @@ P(x) &= \sum_{k=0}^n a_kx^k \\
 $$
 <br><br>
 given the coefficients $$a_0, a_1, \ldots ,a_n$$ and a value for x:
-{% highlight python linenos=table lineanchors %}
+```python
 y = 0
 for i = n downto 0
     y = ai + x y
-{% endhighlight %}
+```
 
 
 >$$\boldsymbol a.$$ In terms of $$\Theta$$-notation, what is the running time of this code fragment for Horner’s rule?<br><br>
@@ -449,7 +448,7 @@ $$\boldsymbol d.$$ Conclude by arguing that the given code fragment correctly ev
 a. $$\Theta(n)$$
 
 b. Naive polynomial evaluation in python
-{% highlight python linenos=table lineanchors %}
+```python
 def naive_poly(A, x):
     sum_ = 0
     highest_power = len(A) - 1
@@ -463,7 +462,7 @@ def naive_poly(A, x):
 
 A = [2, -3, 5, -7]
 print(naive_poly(A, 3))
-{% endhighlight %}
+```
 
 Running time is $$\Theta(n)$$<br>
 But I guess the book wants it in $$\Theta(n^2)$$. With nested for loop.
@@ -492,15 +491,3 @@ c. Insertion sort compares current element with elements before it one by one (s
 
 
 d.
-
-
-
-
-
-
-
-
-
-
-
-
