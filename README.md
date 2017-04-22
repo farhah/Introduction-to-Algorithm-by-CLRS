@@ -1,4 +1,4 @@
-## My solutions to Introduction to Algorithm book by CLRS.
+## My solutions to Introduction to Algorithms book by CLRS.
 
 
 
